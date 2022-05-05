@@ -50,6 +50,7 @@
   color: blue;
 }
 .container .song .songInfo .albomName{
+  text-align: center;
   padding-bottom: 3%;
   color: rgb(193, 8, 51);
   background-color: rgb(0, 0, 0);
@@ -68,19 +69,25 @@
 }
 .container .song .songControl .iconsControl{
   display: flex;
-  justify-content: space-between;
-  padding-inline-start: 30%;
-  padding-inline-end: 30%;
+  justify-content: center;
+  padding-inline-start: 20%;
   padding-top: 10%;
   padding-bottom: 2%;
+  
 }
 #prevStyle{
   cursor: pointer;
+  padding-right: 10%;
 }
 #playStyle{
   cursor: pointer;
+  padding-right: 10%;
 }
 #nextStyle{
+  cursor: pointer;
+}
+#volumestyle{
+  padding-left: 20%;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPause,faPlay,faForwardFast,faBackwardFast } from '@fortawesome/free-solid-svg-icons';
+import { faPause,faRepeat,faVolumeUp,faVolumeOff,faPlay,faForwardFast,faBackwardFast } from '@fortawesome/free-solid-svg-icons';
 import MPContext from './Context';
 
 
@@ -8,8 +8,9 @@ export default function Songcontrol() {
   
   const mpContext=useContext(MPContext);
   const [playPauseIcon,setPlayePauseIcon]=useState(faPlay);
-
-
+  const [volumeIcon,setVolumeIcon]=useState(faVolumeUp);
+  const [volume,setVolume]=useState(true);
+  
   function handleClick() {
     if(mpContext.played){
       mpContext.audioRef.current.pause();
@@ -62,6 +63,18 @@ export default function Songcontrol() {
     mpContext.setInputValue(e.target.value);
   }
 
+  function volumeHandle() {
+    if (volume) {
+      mpContext.audioRef.current.volume=0;
+      setVolumeIcon(faVolumeOff);
+      setVolume(false);
+    }else{
+      mpContext.audioRef.current.volume=1;
+      setVolumeIcon(faVolumeUp);
+      setVolume(true);
+    }
+  }
+
   return (
   
      <div className='songControl'>
@@ -74,6 +87,7 @@ export default function Songcontrol() {
                 <p id='songTimeStyle'>{mpContext.duration}</p>
               </div>
               <div className='iconsControl'>
+            
                <FontAwesomeIcon id='prevStyle' icon={faBackwardFast}
                    onClick={()=>{
                     nextSong("prev")
@@ -87,6 +101,9 @@ export default function Songcontrol() {
                     nextSong("next")
                    }}
                />
+               <FontAwesomeIcon id='volumestyle' icon={volumeIcon}  
+                    onClick={volumeHandle}
+                    />
               </div>
             </div>
    

@@ -13,7 +13,7 @@ export default function Songinfo() {
     <div ref={divRef} className='songInfo'>
               <div className='songName'>{mpContext.songs[mpContext.currentSongIndex].songName}</div>
               <div className='artistName'>{mpContext.songs[mpContext.currentSongIndex].artistName}</div>
-              <div className='albomName'>https://github.com/Zahra987</div>
+              <div className='albomName'>https://www.linkedin.com/in/bahmanshamsini</div>
             </div>
   )
 }

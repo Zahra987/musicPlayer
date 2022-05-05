@@ -55,7 +55,15 @@ export default function Musicplayer() {
              songName: " بامزه",
              song: "https://dls.music-fa.com/tagdl/ati/Amin%20Ara%20Ft%20Amirhossein%20Farahmand%20-%20Bamaze%20(320).mp3",
              active:false
-             }
+             },
+             {
+               id:6,
+               img: "url(https://music-fa.com/wp-content/uploads/2021/11/Alireza-Talischi-Ay-Leila-Leila-Music-fa.com_.jpg)",
+               artistName: "علیرضا طلیسچی",
+               songName: "آی لیلا لیلا یه گوشه چشمی بنداز",
+               song: "https://dls.music-fa.com/tagdl/ali/Alireza%20Talischi%20-%20Leyla%20(320).mp3",
+               active:false
+               }
   ]);
 
   const [played,setPlayed]=useState(false);
