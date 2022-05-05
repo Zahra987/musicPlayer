@@ -31,7 +31,31 @@ export default function Musicplayer() {
           songName: "خاله خاله جان",
           song: "https://dl.musicdel.ir/Music/1400/01/Wahid%20Roham%20-%20Khala%20Jan%20(128).mp3",
           active:false
-          }
+          },
+          {
+            id:3,
+            img: "url(https://music-fa.com/wp-content/uploads/2022/02/Majid-Razavi-Tala-Music-fa.com_.jpg)",
+            artistName: "مجید رضوی",
+            songName: "طلا",
+            song: "https://dls.music-fa.com/tagdl/NEW2022/Majid%20Razavi%20-%20Tala%20(320).mp3",
+            active:false
+         },
+         {
+           id:4,
+           img: "url(https://musicspardis.org/wp-content/uploads/2021/10/Agha.jpg)",
+           artistName: "سارن",
+           songName: "اصغراقا",
+           song: "https://s1.pr3m.ir/Music/1399/4/21/02/Saaren%20-%20Asghar%20Agha..mp3",
+           active:false
+           },
+           {
+             id:5,
+             img: "url(https://music-fa.com/wp-content/uploads/2021/07/Amin-Ara-Ft-Amirhossein-Farahmand-Bamaze-Music-fa.com_.jpg)",
+             artistName: "امین آرا و امیرحسین فرهمند",
+             songName: " بامزه",
+             song: "https://dls.music-fa.com/tagdl/ati/Amin%20Ara%20Ft%20Amirhossein%20Farahmand%20-%20Bamaze%20(320).mp3",
+             active:false
+             }
   ]);
 
   const [played,setPlayed]=useState(false);
